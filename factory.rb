@@ -21,16 +21,3 @@ class Factory
   
 end
 
-SuperHero = Factory.new(:name, :type, :skills, :city) do
-  def greeting
-    "Hello, I'm #{name}!"
-  end
-
-  def push_web
-    "piu "*3
-  end
-end
-
-spiderman = SuperHero.new("Peter Parker", "human-spider", "spyder's web", "New York City")
-a = spiderman #a is alias?
-puts a.name, a[:type], a["skills"], a[3], a.greeting, a.push_web
